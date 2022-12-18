@@ -1,6 +1,7 @@
+import { FC } from "react";
 import Heading from "./Heading";
 
-const Footer = () => {
+const Footer: FC = () => {
    return (
       <footer>
          <Heading text="Footer" />

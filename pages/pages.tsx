@@ -1,9 +1,9 @@
+import { FC } from "react";
 import Heading from "../components/Heading";
 import Head from "next/head";
-
 import Navbar from "../components/Navbar";
 
-const Page = () => {
+const Page: FC = () => {
    return (
       <>
          <div>

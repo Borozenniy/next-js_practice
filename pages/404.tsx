@@ -1,9 +1,10 @@
+import { FC } from "react";
 import Heading from "../components/Heading";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-const Error = () => {
+const Error: FC = () => {
    const router = useRouter();
 
    useEffect(() => {

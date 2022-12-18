@@ -1,10 +1,13 @@
+import { FC } from "react";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.scss";
 import Socials from "../components/Socials";
 import Heading from "../components/Heading";
+import { socialsType } from "../types";
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
    /*
     * Робимо
     */
@@ -22,7 +25,11 @@ export const getStaticProps = async () => {
    };
 };
 
-const Home = ({ socials }) => {
+type socialsTypeProps = {
+   socials: [socialsType];
+};
+
+const Home: FC<socialsTypeProps> = ({ socials }) => {
    return (
       <div className={styles.wrapper}>
          <Head>

@@ -5,10 +5,16 @@ import styles from "../../styles/Contacts.module.scss";
 import computer from "../../public/computer.png";
 import Heading from "../../components/Heading";
 import Navbar from "../../components/Navbar";
+import { FC } from "react";
+import { GetStaticProps } from "next";
+import { contactType } from "../../types";
 
+type contactTypeProps = {
+   contacts: [contactType];
+};
 // import { useEffect, useState } from "react";
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
    const response = await fetch("https://jsonplaceholder.typicode.com/users");
    const data = await response.json();
 
@@ -22,7 +28,7 @@ export const getStaticProps = async () => {
    };
 };
 
-const Contacts = ({ contacts }) => {
+const Contacts: FC<contactTypeProps> = ({ contacts }) => {
    /* 
    * Замість рендеру на стороні користувача (CSR)
    * використовуємо статичний пропс для рендеру на боці серверу (SSR)

@@ -1,6 +1,13 @@
-const Heading = ({ tag, text }) => {
-   const Tag = tag || "h2";
-   return <Tag>{text}</Tag>;
-};
+import { FC } from "react";
 
+const Tag = (text) => {
+   return (
+      <>
+         <div></div>
+      </>
+   );
+};
+const Heading = ({ tag, text }: { tag?: string; text: string }) => {
+   return <Tag text={text || "h1"} />;
+};
 export default Heading;
