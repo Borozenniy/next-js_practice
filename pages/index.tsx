@@ -35,7 +35,7 @@ const Home: FC<socialsTypeProps> = ({ socials }) => {
          <Head>
             <title>Home</title>
          </Head>
-         <div>Hello it's for new font</div>
+         <div>Hello its for new font</div>
          <Heading text="NextJs application" />
 
          <Socials socials={socials} />
